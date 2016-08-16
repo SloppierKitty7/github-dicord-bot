@@ -1,0 +1,6 @@
+{
+	"token": "Your bot token here",
+	"channel_name": "general",
+	"secret": "github secret key here",
+	"port": "7777"
+}
