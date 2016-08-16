@@ -24,7 +24,7 @@ bot.on('ready', () => {
 var channel = bot.channels.get("name", config.channel_name).id; 
 	//issue event
 	handler.on('issues', function (event) {
-		bot.channels.get("id", channel).sendMessage("**" + event.payload.issue.user.login + "** has opened an issue " + "**#" + event.payload.issue.number + "**" + " for " + "**" + event.payload.repository.name + "**" + "\ntitled  " + "**" + event.payload.issue.title + "**" + "\n\n```" + event.payload.issue.body + "```");
+		bot.channels.get("id", channel).sendMessage("**" + event.payload.issue.user.login + "** has "+ event.payload.issue.state +" an issue " + "**#" + event.payload.issue.number + "**" + " for " + "**" + event.payload.repository.name + "**" + "\ntitled  " + "**" + event.payload.issue.title + "**" + "\n\n```" + event.payload.issue.body + "```");
 	});
 	//push event
 	handler.on('push', function (event) {
